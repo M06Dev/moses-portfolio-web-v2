@@ -2,10 +2,25 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+projects = [
+    {
+        "pj": 1,
+        "title": "Ultrasound Report Generator",
+        "Description": "this website does so so so...",
+    },
+    {"pj": 2, "title": "Wallet", "Description": "this website does so so so..."},
+    {"pj": 3, "title": "Medical Jobs", "Description": "this website does so so so..."},
+    {
+        "pj": 4,
+        "title": "Medical Website",
+        "Description": "this website does so so so...",
+    },
+]
+
 
 @app.route("/")
 def hello_world():
-    return render_template("home.html")
+    return render_template("home.html", projs=projects)
 
 
 if __name__ == "__main__":
