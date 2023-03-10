@@ -15,16 +15,18 @@
       #banner {
         height: 360px;
         object-fit: cover;
-        width: 100%
+        width: 100%;
+        margin-bottom: 16px;
       }
 
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="http://127.0.0.1:5000/static/banner.jpg" />
     <div class="container">
       <h1 class="text-center mt-2 mb-4">MSP Portfolio</h1>
-      <img class="img-fluid" id="banner" src="http://127.0.0.1:5000/static/banner.jpg" />
-      <h2 class="text-center">About Moses</h2>
+      
       <p class="lead">
         Lorem ipsum dolor sit amet. Et aliquam voluptatem et enim accusantium
         est iure porro est odit quia. 33 consequatur reprehenderit eos optio
@@ -41,5 +43,6 @@
         <button class="btn btn-primary btn-lg">Contacts Us</button>
       </div>
     </div>
+    {% include "footer.html" %}
   </body>
 </html>
